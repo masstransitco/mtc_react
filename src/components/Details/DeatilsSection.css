@@ -1,0 +1,164 @@
+/* Details Section Styling */
+.details-section {
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details-container {
+  display: flex;
+  gap: 20px;
+}
+
+.items-list {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.items-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.items-list li {
+  padding: 15px;
+  background: #2c2c2c;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-size: 1rem;
+}
+
+.route-info {
+  display: none; /* Hidden by default */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.route-info .time {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #276EF1; /* Illuminating effect */
+  line-height: 1;
+  display: block; /* Ensure it occupies its own line */
+}
+
+.route-info .unit {
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 0 10px #276EF1; /* Illuminating effect */
+  line-height: 1;
+}
+
+.route-details-toggle {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  align-self: flex-end;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  display: none; /* Hidden by default */
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.choose-destination-btn, .pay-as-you-go-btn {
+  background-color: #276EF1; /* Uber blue */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  display: none; /* Hidden by default */
+}
+
+.pay-as-you-go-btn {
+  background-color: #C7C7CC; /* Uber gray */
+  color: #000;
+}
+
+.choose-destination-btn:hover, .pay-as-you-go-btn:hover, .lock-btn:hover, .unlock-btn:hover {
+  opacity: 0.8;
+}
+
+.route-details {
+  display: none; /* Hidden by default */
+  margin-top: 10px;
+  background: #2c2c2c;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+/* Last Known Location Styles */
+.last-location {
+  width: 100%;
+  padding: 15px;
+  background: #2c2c2c;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  display: none; /* Hidden by default */
+}
+
+.last-location .address {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.last-location .address .english {
+  font-size: 1rem;
+}
+
+.last-location .address .chinese {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+  }
+
+  .items-list, .right-container {
+    width: 100%;
+  }
+
+  .last-location {
+    font-size: 0.9rem;
+  }
+
+  .choose-destination-btn, .pay-as-you-go-btn {
+    display: none; /* Adjust display as needed */
+  }
+}

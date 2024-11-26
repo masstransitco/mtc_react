@@ -1,0 +1,11 @@
+/* Selected Info Container */
+.selected-info-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  display: none; /* Hidden by default */
+  color: #fff;
+}

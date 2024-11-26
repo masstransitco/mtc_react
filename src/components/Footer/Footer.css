@@ -1,0 +1,58 @@
+/* Footer Styling */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #1e1e1e; /* Footer background */
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+footer img {
+  height: 40px; /* Adjusted logo size */
+}
+
+.dropdown-container select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-container select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #276EF1; /* Uber blue focus */
+}
+
+/* Lock and Unlock Buttons in Footer */
+.lock-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.lock-btn, .unlock-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  display: none; /* Hidden by default */
+}
+
+.lock-btn {
+  background-color: #C7C7CC; /* Uber gray */
+  color: #000; /* Black text */
+}
+
+.unlock-btn {
+  background-color: #09091A; /* Dark background */
+  color: #fff; /* White text */
+}
+
+.unlock-btn:hover, .lock-btn:hover {
+  opacity: 0.8;
+}

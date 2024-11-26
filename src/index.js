@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { AppProvider } from './context/AppContext';
 import './styles/globals.css';
-import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Import ArcGIS CSS
 import '@arcgis/core/assets/esri/themes/light/main.css';

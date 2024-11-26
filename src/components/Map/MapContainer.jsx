@@ -6,6 +6,9 @@ import MapView from '@arcgis/core/views/MapView';
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
 import './MapContainer.css';
 
+// Import ArcGIS CSS
+import '@arcgis/core/assets/esri/themes/light/main.css';
+
 const MapContainer = ({ onMapViewLoad }) => {
   const mapRef = useRef();
 

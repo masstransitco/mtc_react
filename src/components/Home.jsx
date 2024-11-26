@@ -1,12 +1,20 @@
-import React from 'react';
+// src/components/Home.jsx
 
-function Home() {
+import React from 'react';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import './Home.css'; // Create this file for additional styles if needed
+
+const Home = ({ children }) => {
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the main landing page of the application.</p>
+    <div className="home-container">
+      <Header />
+      <main>
+        {children}
+      </main>
+      <Footer />
     </div>
   );
-}
+};
 
 export default Home;

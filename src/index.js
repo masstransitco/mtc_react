@@ -5,8 +5,11 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { AppProvider } from './context/AppContext';
 import './styles/globals.css';
-import ErrorBoundary from './components/ErrorBoundary';
- 
+import ErrorBoundary from './ErrorBoundary';
+
+// Import ArcGIS CSS
+import '@arcgis/core/assets/esri/themes/light/main.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

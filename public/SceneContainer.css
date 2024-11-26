@@ -1,0 +1,7 @@
+/* src/components/Scene/SceneContainer.css */
+
+.scene-container {
+  width: 100%;
+  height: 40vh; /* Remaining 40% of the viewport height */
+  margin-top: 0;
+}

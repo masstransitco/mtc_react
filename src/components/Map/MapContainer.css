@@ -1,7 +1,19 @@
 /* src/components/Map/MapContainer.css */
 
+/* Map Container Styling */
 .map-container {
   width: 100%;
   height: 60vh; /* 60% of the viewport height */
-  margin-top: 0;
+  border: 1px solid #ddd; /* Optional: Adds a border for distinction */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the map does not overflow its container */
+  margin-bottom: 1rem; /* Space between the map and the scene */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .map-container {
+    height: 50vh; /* Adjust height for smaller screens */
+    margin-bottom: 0.5rem;
+  }
 }

@@ -4,12 +4,43 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { AppProvider } from './context/AppContext';
 import './styles/globals.css';
+import ErrorBoundary from './ErrorBoundary';
+
+import './App.css';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider>
+    <ErrorBoundary>
       <App />
-    </AppProvider>
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import NotFound from './NotFound';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+function ExampleComponent({ isVisible }) {
+  if (!isVisible) {
+    return null;
+  }
+  return <div>Content is visible</div>;
+}
+

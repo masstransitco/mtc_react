@@ -1,4 +1,5 @@
-// src/components/ErrorBoundary.js
+// src/ErrorBoundary.jsx
+
 import React from 'react';
 
 class ErrorBoundary extends React.Component {
@@ -8,22 +9,27 @@ class ErrorBoundary extends React.Component {
   }
 
   static getDerivedStateFromError(error) {
-    // Update state so next render shows fallback UI
+    // Update state so the next render shows the fallback UI.
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
-    // Log error details
-    console.error('ErrorBoundary caught an error:', error, info);
+  componentDidCatch(error, errorInfo) {
+    // You can log the error to an error reporting service here
+    console.error("Uncaught error:", error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      // Fallback UI
-      return <h2>Something went wrong while loading the map.</h2>;
+      // You can render any custom fallback UI
+      return (
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <h2>Something went wrong.</h2>
+          <p>Please try refreshing the page or contact support if the problem persists.</p>
+        </div>
+      );
     }
 
-    return this.props.children; 
+    return this.props.children;
   }
 }
 

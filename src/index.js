@@ -1,12 +1,18 @@
 // src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import { AppProvider } from './context/AppContext';
 import './styles/globals.css';
 import ErrorBoundary from './ErrorBoundary';
 
-import './App.css';
+import './App.css';const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
 
 ReactDOM.render(

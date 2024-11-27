@@ -1,18 +1,34 @@
 // src/services/firebase.js
 
-import firebase from 'firebase/app';
-import 'firebase/auth';
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  projectId: 'YOUR_PROJECT_ID',
-  // ... other config
+  apiKey: "AIzaSyAj46uOcP-Y4T3X2ZpdlWt4_PxUWCTFwyM",
+  authDomain: "masstransitcompany.firebaseapp.com",
+  projectId: "masstransitcompany",
+  storageBucket: "masstransitcompany.firebasestorage.app",
+  messagingSenderId: "1039705984668",
+  appId: "1:1039705984668:web:e85aafd14917825b3d6759",
+  measurementId: "G-NMMQLPBJD1",
 };
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const googleProvider = new GoogleAuthProvider();
 
-export const auth = firebase.auth();
-export const googleProvider = new firebase.auth.GoogleAuthProvider();
+export const signInWithGoogle = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const user = result.user;
+    return {
+      displayName: user.displayName,
+      email: user.email,
+      photoURL: user.photoURL,
+    };
+  } catch (error) {
+    console.error("Google Sign-In error:", error);
+    throw error;
+  }
+};

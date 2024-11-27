@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import logo from '../../public/logo.png'; // Ensure logo.png is in the public folder
+import logo from './logo.png'; // Ensure logo.png is in the public folder
 
 const Footer = () => {
   return (

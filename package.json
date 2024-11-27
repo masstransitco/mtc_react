@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "A React application integrated with ArcGIS for interactive mapping and 3D scenes.",
-  "homepage": ".", 
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -25,7 +25,9 @@
     "@babel/preset-env": "^7.26.0",
     "babel-loader": "^9.2.1",
     "eslint": "^8.45.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-config-prettier": "^8.8.0",
     "prettier": "^2.8.8",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
